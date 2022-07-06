@@ -20,9 +20,26 @@ export class SandboxComponent{
     name: string = "Joe Doe";
     age: number = 35;
 
+    people = ['Rick', 'Daryl', 'Carl', 'Glen'];
+
+    people2 = [
+        {
+            firstname: 'Rick',
+            lastname: 'Grimes',
+        },
+        {
+            firstname: 'Daryl',
+            lastname: 'Dixon',
+        },
+        {
+            firstname: 'Glen',
+            lastname: 'Rhee',
+        }
+    ];
+
 
     constructor(){   
-
+            this.people[2] = 'Carol';
         
     }   
 

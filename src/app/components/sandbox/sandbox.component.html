@@ -1,4 +1,21 @@
 Hello World from the HTMl
 <h1 class="special">{{ name }} is {{ age }} years old.</h1>
+
+{{ people[people.length-1] }}
+
+<hr>
+<ul>
+    <li *ngFor="let person of people">{{ person }}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let person of people; let i = index">{{ i + 1 }} {{ person }}</li>
+</ul>
+<hr/>
+<ul>
+    <li *ngFor="let person of people2; let i=index;">
+        {{person.firstname}} {{person.lastname}}
+    </li>
+</ul>
     
                
