@@ -8,13 +8,23 @@ import { Component } from '@angular/core';
                     <li>Helo World</li>
                     <li> {{ 1 + 1}}</li>
                     <li> {{ showAge() }}</li>
+                    <li> {{ myitems }} </li>
                </ul>
     `
 })
 
 export class SandboxComponent{
-    name = "John Doe";
-    age = 35;
+    name: string = "John Doe";
+    age: number = 35;
+    isvalid: boolean = false;
+    people: object = [];
+    things: any = {};
+    mynumbers: Array<number> = [1,2,3,4];
+    skills: Array<string> = ['string','test','jump'];
+    myitems: Array<any> = ['seyi', 2, true];
+    //purse: Tuple
+    you: undefined;
+    //testing: null
 
     person = {firstname: 'Steve', lastname: 'Smith'};
 
