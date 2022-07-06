@@ -1,21 +1,29 @@
-Hello World from the HTMl
-<h1 class="special">{{ name }} is {{ age }} years old.</h1>
 
-{{ people[people.length-1] }}
+<h1 class="special">{{ name }}</h1>
+<div>Hello 
+    <!--
+    <span *ngIf="showName">{{ name }}</span>
+    <span *ngIf="!showName"> World</span>
 
-<hr>
-<ul>
-    <li *ngFor="let person of people">{{ person }}</li>
-</ul>
+    //-->
 
-<ul>
-    <li *ngFor="let person of people; let i = index">{{ i + 1 }} {{ person }}</li>
-</ul>
-<hr/>
-<ul>
-    <li *ngFor="let person of people2; let i=index;">
-        {{person.firstname}} {{person.lastname}}
-    </li>
-</ul>
+    <span *ngIf="showName; else noName">{{ name }}</span>
+    <ng-template #noName>World</ng-template>
+
+    <hr>
+    <span>Hello {{ showName ? name :  'World' }}</span>
+
+    <hr/>
+    <div [ngSwitch]="greeting">
+        <div *ngSwitchCase="'1'">Hello Greeting</div>
+        <div *ngSwitchCase="'2'">Hi Buddy</div>
+        <div *ngSwitchCase="'3'">Good bye</div>
+        <div *ngSwitchDefault>Hello World</div>
+
+    </div>
+</div>
+
+
+
     
                
